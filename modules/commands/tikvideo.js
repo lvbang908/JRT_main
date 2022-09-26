@@ -18,7 +18,7 @@ module.exports.run = async function ({ api, event, args }) {
     try {
       let results = {};
       let key = await axios.get(
-        `http://api.leanhtruong.net/api-no-key/tiktok?url=${event.messageReply.args[0]}`,
+        `https://docs-api.nguyenhaidang.ml/tiktok/download?link=${event.messageReply.args[0]}`,
       );
       console.log(key)
       key = JSON.parse(JSON.stringify(key.data, null, 2));
@@ -78,7 +78,7 @@ module.exports.run = async function ({ api, event, args }) {
             event.messageID,
           );
         let key = await axios.get(
-          `http://api.leanhtruong.net/api-no-key/tiktok?url=${args[1]}`,
+          `https://docs-api.nguyenhaidang.ml/tiktok/download?link=${args[1]}`,
         );
         key = JSON.parse(JSON.stringify(key.data, null, 2));
         if (key.error != 0)
@@ -124,7 +124,7 @@ module.exports.run = async function ({ api, event, args }) {
       try {
         let results = {};
         let key = await axios.get(
-          `http://api.leanhtruong.net/api-no-key/tiktok?url=${args[0]}`,
+          `https://docs-api.nguyenhaidang.ml/tiktok/download?link=${args[0]}`,
         );
         key = JSON.parse(JSON.stringify(key.data, null, 2));
         
