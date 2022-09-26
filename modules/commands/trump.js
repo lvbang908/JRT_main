@@ -6,7 +6,7 @@ module.exports.config = {
 	hasPermssion: 0,
 	credits: "trump",
 	description: "Comment trên bảng ( ͡° ͜ʖ ͡°)",
-	commandCategory: "Troll",
+	commandCategory: "Tạo ảnh",
 	usages: "trump [text]",
 	cooldowns: 10,
 	dependencies: {
